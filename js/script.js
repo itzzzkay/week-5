@@ -175,3 +175,7 @@ const games = [
 ];
 const Genre = document.getElementById("Genre").value;
 const Mode = document.getElementById("Player-mode").value;
+
+const suggestion = games.filter(
+  (games) => games.genre === Genre && games.mode === Mode
+);
