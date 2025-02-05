@@ -8,20 +8,38 @@
     <script href="/js/about.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="about.html">About Us</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
+    <header class="header-index">
+      <div class="header-logo">
+        <img
+          src="data:image/png;base64,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"
+          alt="GAME+ logo"
+        />
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
+    <main>
+      <p>
+        Have you ever looked for a game to satisfy your boredom and found
+        yourself in a dilemma?<br />
+        Worry not! Game+ provides a simple solution for this. Simply fill out
+        the genre and player mode<br />
+        of the game you want and the website will provide you with
+        recommendations based on your<br />
+        desire. Why suffer looking for games that end up boring you when Game+
+        has everything you need right here!
+      </p>
+    </main>
   </body>
 </html>
