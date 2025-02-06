@@ -3,7 +3,10 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    if (!Genre || !Player - mode) {
+    const Genre = document.getElementById("Genre").value;
+    const Mode = document.getElementById("mode").value;
+
+    if (!Genre || !Mode) {
       alert("Kinldly fill in the forms that have been provided!");
       return;
     }
@@ -173,9 +176,17 @@ const games = [
     console: "PC, PlayStation, Nintendo Switch, Xbox",
   },
 ];
-const Genre = document.getElementById("Genre").value;
-const Mode = document.getElementById("Player-mode").value;
 
 const suggestion = games.filter(
   (games) => games.genre === Genre && games.mode === Mode
 );
+const Output = document.getElementById("output");
+if (suggestion.length > 0) {
+  output.textContent = `We recomend that you check out ${suggestion.map(
+    (game) => game.title
+  )}.`;
+} else {
+  output.textContent = "We don't have any games for you right now. :(";
+}
+
+console.log("output");
