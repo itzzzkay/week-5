@@ -1,5 +1,6 @@
 body {
   background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
 .header-index {
@@ -9,15 +10,14 @@ body {
   background-color: #000000;
 }
 .logo-space {
-    display: flex;
-    width: fit-content;
-    height: 100%;
-    padding-left: 50px;
+  display: flex;
+  width: fit-content;
+  height: 100%;
+  padding-left: 50px;
 }
 
 .logo-space img {
   height: 100px;
-
 }
 .navbar {
   width: fit-content;
@@ -27,17 +27,23 @@ body {
   list-style: none;
 }
 .navbar ul li {
-  margin-right: 80px;
-  margin-left: 60px;
+  margin-right: 10px;
+  margin-left: 300px;
   display: inline;
 }
 a {
   cursor: pointer;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 60px;
-  font-size:x-large;
+  font-size: x-large;
   color: #f0a248;
 }
 a:hover {
-    color: #ff8800;
+  color: #ff8800;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 750px;
 }
