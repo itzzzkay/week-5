@@ -30,39 +30,41 @@
       </nav>
     </header>
     <main>
-      <section class="Page-one">
-        <p>Simply fill in the form below and get your game recommendations.</p>
-        <form id="gameplus">
-          <div class="forms">
-            <label for="Genre">Genre:</label>
-            <select type="text" id="Genre" required>
-              <option value="Adventure">Adventure</option>
-              <option value="Action">Action</option>
-              <option value="Sports">Sports</option>
-              <option value="Simulation">Simulation</option>
-              <option value="Platformer">Platformer</option>
-              <option value="RPG">RPG</option>
-              <option value="FPS">FPS</option>
-              <option value="Fighting">Fighting</option>
-              <option value="Racing">Racing</option>
-              <option value="Party">Party</option>
-              <option value="Survival">Survival</option>
-              <option value="Battle Royale">Battle Royale</option>
-              <option value="Horror">Horror</option>
-            </select><br />
-            <br />
-            <label for="mode">Player Mode:</label>
-            <select type="radio" id="mode" required>
-              <option value="  Singleplayer  ">Singleplayer</option>
-              <option value="  Multiplayer  ">Multiplayer</option>
-            </select>
-          </div><br />
-          <button type="submit" class="buttons">See Recommendations</button>
-        </form><br />
-        <div id="output" class="output">
-          <p id="recommendation"></p>
+        <div class="box">
+            <section class="Page-one">
+                <h1>Simply fill in the form below and get your game recommendations.</h1>
+            <form id="gameplus" class="lol">
+                <div class="forms">
+                 <label for="Genre">Genre:</label>
+                 <select type="text" id="Genre" required>
+                     <option value="Adventure">Adventure</option>
+                    <option value="Action">Action</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Simulation">Simulation</option>
+                    <option value="Platformer">Platformer</option>
+                    <option value="RPG">RPG</option>
+                    <option value="FPS">FPS</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Racing">Racing</option>
+                    <option value="Party">Party</option>
+                    <option value="Survival">Survival</option>
+                    <option value="Battle Royale">Battle Royale</option>
+                    <option value="Horror">Horror</option>
+                 </select><br />
+                    <br />
+                 <label for="mode">Player Mode:</label>
+                 <select type="radio" id="mode" required>
+                    <option value="  Singleplayer  ">Singleplayer</option>
+                    <option value="  Multiplayer  ">Multiplayer</option>
+                 </select>
+                </div><br />
+                <button type="submit" class="buttons">See Recommendations</button>
+            </form><br />
+            <div id="output" class="output">
+             <p id="recommendation"></p>
+            </div>
+            </section>
         </div>
-      </section>
     </main>
   </body>
 </html>

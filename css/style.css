@@ -1,13 +1,15 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: url(gaming2.jpg) no-repeat;
+  background: url(https://media.istockphoto.com/id/1334436084/photo/top-down-view-of-colorful-illuminated-gaming-accessories-laying-on-table.webp?s=2048x2048&w=is&k=20&c=J2qfGA-u02aSNPRw4IrjX_qPoxYvcQtmHkKeF8V43oY=) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .header-index {
   display: flex;
   height: 100px;
   width: 100%;
-  background-color: #000000;
+  background: transparent;
 }
 .logo-space {
   display: flex;
@@ -39,7 +41,7 @@ a {
   color: #f0a248;
 }
 a:hover {
-  color: #ff8800;
+  color:purple;
 }
 main {
   display: flex;
@@ -49,8 +51,10 @@ main {
 }
 .box {
   width: 420px;
-  background: purple;
-  color: #ffffff;
+  background: transparent;
+  color: #000000;
+  font-size: larger;
+  font-weight: 1000;
   border-radius: 30px;
   padding: 40px 40px;
 }
@@ -59,7 +63,7 @@ main {
 }
 .box .Page-one h1:hover {
   text-decoration: underline;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .box .Page-one .lol .forms {
   width: 100%;
@@ -84,4 +88,9 @@ main {
 }
 h1 {
   animation: fromLeft 1s ease-in;
+}
+.output {
+  color: purple;
+  text-decoration: underline;
+  font-size: x-large; 
 }
