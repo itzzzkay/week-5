@@ -1,17 +1,3 @@
-document
-  .getElementById("gameplus")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const Genre = document.getElementById("Genre").value;
-    const Mode = document.getElementById("mode").value;
-
-    if (!Genre || !Mode) {
-      alert("Kinldly fill in the forms that have been provided!");
-      return;
-    }
-  });
-
 const games = [
   {
     title: "Stray",
@@ -22,7 +8,7 @@ const games = [
   {
     title: "Ghost of Tsushima",
     genre: "Adventure",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation",
   },
   {
@@ -40,31 +26,31 @@ const games = [
   {
     title: "Grand Theft Auto V",
     genre: "Action",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Xbox",
   },
   {
     title: "FC 25",
     genre: "Sports",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Nintendo Switch, Xbox",
   },
   {
     title: "NBA 2K25",
     genre: "Sports",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PlayStation, Xbox",
   },
   {
     title: "Euro Truck Simulator",
     genre: "Simulation",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC",
   },
   {
     title: "Gran Tourismo 7",
     genre: "Simulation",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PlayStation",
   },
   {
@@ -82,7 +68,7 @@ const games = [
   {
     title: "Elden Ring",
     genre: "RPG",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Xbox",
   },
   {
@@ -94,73 +80,73 @@ const games = [
   {
     title: "Call Of Duty: Warzone",
     genre: "FPS",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Xbox",
   },
   {
     title: "DOOM Eternal",
     genre: "FPS",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Nintendo Switch, Xbox",
   },
   {
     title: "Mortal Kombat 1",
     genre: "Fighting",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Nintendo Switch, Xbox",
   },
   {
     title: "Super Smash Bros. Ultimate",
     genre: "Fighting",
-    mode: "All",
+    mode: "Multiplayer",
     console: "Nintendo Switch",
   },
   {
     title: "Forza Horizon 5",
     genre: "Racing",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Xbox",
   },
   {
     title: "Need for Speed: Most Wanted",
     genre: "Racing",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Wii U, Xbox",
   },
   {
     title: "Among Us",
     genre: "Party",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Nintendo Switch, Xbox",
   },
   {
     title: "Mario Kart 8",
     genre: "Party",
-    mode: "All",
+    mode: "Multiplayer",
     console: "Nintendo Switch, Wii U",
   },
   {
     title: "Minecraft",
     genre: "Survival",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Nintendo Switch, Xbox, Wii U",
   },
   {
     title: "Rust",
     genre: "Survival",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Xbox",
   },
   {
     title: "Fortnite",
     genre: "Battle Royale",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Nintendo Switch, Xbox",
   },
   {
     title: "Apex Legends",
     genre: "Battle Royale",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Nintendo Switch, Xbox",
   },
   {
@@ -172,21 +158,34 @@ const games = [
   {
     title: "Dead by Daylight",
     genre: "Horror",
-    mode: "All",
+    mode: "Multiplayer",
     console: "PC, PlayStation, Nintendo Switch, Xbox",
   },
 ];
 
-const suggestion = games.filter(
-  (games) => games.genre === Genre && games.mode === Mode
-);
-const Output = document.getElementById("output");
-if (suggestion.length > 0) {
-  output.textContent = `We recomend that you check out ${suggestion.map(
-    (game) => game.title
-  )}.`;
-} else {
-  output.textContent = "We don't have any games for you right now. :(";
-}
+document
+  .getElementById("gameplus")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
 
-console.log("output");
+    const Genre = document.getElementById("Genre").value.trim();
+    const Mode = document.getElementById("mode").value.trim();
+
+    if (!Genre || !Mode) {
+      alert("Kindly fill in the forms that have been provided!");
+      return;
+    }
+
+    const suggestion = games.filter(
+      (games) => games.genre === Genre && games.mode === Mode
+    );
+
+    const output = document.getElementById("output");
+    if (suggestion.length > 0) {
+      output.textContent = `We recomend that you check out ${suggestion
+        .map((game) => game.title)
+        .join(" and ")}.`;
+    } else {
+      output.textContent = "We don't have any games for you right now. :(";
+    }
+  });
