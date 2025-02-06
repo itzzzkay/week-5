@@ -1,3 +1,4 @@
+// declaration of games array
 const games = [
   {
     title: "Stray",
@@ -163,22 +164,32 @@ const games = [
   },
 ];
 
+// adding the event listener
+
 document
   .getElementById("gameplus")
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
+    // taking the user input and assigning it constants
+
     const Genre = document.getElementById("Genre").value.trim();
     const Mode = document.getElementById("mode").value.trim();
+
+    // input validation
 
     if (!Genre || !Mode) {
       alert("Kindly fill in the forms that have been provided!");
       return;
     }
 
+    // filtering the games array for the games that match the user input
+
     const suggestion = games.filter(
       (games) => games.genre === Genre && games.mode === Mode
     );
+
+    // provides the game suggestions as output and displays it through html
 
     const output = document.getElementById("output");
     if (suggestion.length > 0) {
