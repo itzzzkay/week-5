@@ -182,10 +182,10 @@ document
 
     const output = document.getElementById("output");
     if (suggestion.length > 0) {
-      output.textContent = `We recomend that you check out ${suggestion
+      output.textContent = `We recommend that you check out ${suggestion
         .map((game) => game.title)
         .join(" and ")}.`;
     } else {
-      output.textContent = "We don't have any games for you right now. :(";
+      output.textContent = "We don't have any games for you right now :(";
     }
   });
